@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DataContextPackageNS
+</name>
+</assembly>
+<members>
+<member name="P:DataContextPackageNS.DC_Package.GSM_LoginID">
+	<summary>
+ This is the GlobalSurveyMaster_LoginID provided to the constructor of this instance...
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:DataContextPackageNS.DC_Package._Survey_Privilege_List">
+	<summary>
+ List of SurveyID and PrivilegeBitMask of PrivilegeDescrEnum
+ </summary>
+	<remarks></remarks>
+</member><member name="P:DataContextPackageNS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:DataContextPackageNS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:DataContextPackageNS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

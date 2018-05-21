@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.25, 8.5" name="L2S_SubscriberSurveyMaster">
+  <DataContextMoniker Name="/L2S_SubscriberSurveyMasterDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d88c4aae-97e2-47b0-9c7f-7357ec756d2f" absoluteBounds="7.875, 1, 2, 3.3970157877604166">
+      <DataClassMoniker Name="/L2S_SubscriberSurveyMasterDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c43a2382-5350-4624-b284-a20f6837ddb3" absoluteBounds="7.89, 1.46, 1.9700000000000002, 2.8370157877604165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2afefb1e-e76f-4694-83e6-88441a309164" absoluteBounds="7, 5, 2, 2.5752791341145831">
+      <DataClassMoniker Name="/L2S_SubscriberSurveyMasterDataContext/LoginInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="66ee7683-704e-4b51-ba83-b23c966e3749" absoluteBounds="7.015, 5.46, 1.9700000000000002, 2.015279134114583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0081d666-a92f-463a-bf74-1efd5559dbaa" absoluteBounds="10, 0.875, 2, 1.75354248046875">
+      <DataClassMoniker Name="/L2S_SubscriberSurveyMasterDataContext/LoginSurveyPrivilege" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81163a52-a05d-439d-bbd7-d26fba6cf276" absoluteBounds="10.015, 1.335, 1.9700000000000002, 1.19354248046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9d532033-cd97-4fa7-aec1-495fb0db335c" absoluteBounds="9.5, 3.125, 2, 1.5891951497395831">
+      <DataClassMoniker Name="/L2S_SubscriberSurveyMasterDataContext/SurveyDataStore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be5a8fba-409d-4920-b554-0ef6db5837a8" absoluteBounds="9.515, 3.585, 1.9700000000000002, 1.0291951497395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a3abd37d-81a3-4091-a3a1-4eae459305bb" absoluteBounds="4.625, 1.125, 2, 1.26050048828125">
+      <DataClassMoniker Name="/L2S_SubscriberSurveyMasterDataContext/Privilege" />
+      <nestedChildShapes>
+        <elementListCompartment Id="acf48b88-4e36-4207-b8a3-c841d55b0fb2" absoluteBounds="4.64, 1.585, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="40fd78e5-9291-4f7b-af28-4ee7c846c6d9" absoluteBounds="6.5, 3.125, 2, 5.0404890950520826">
+      <DataClassMoniker Name="/L2S_SubscriberSurveyMasterDataContext/SurveyMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a03dfff-e20f-4354-8cda-5b19db614397" absoluteBounds="6.515, 3.585, 1.9700000000000002, 4.480489095052083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

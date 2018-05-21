@@ -1,0 +1,148 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CmdInfrastructureNS
+</name>
+</assembly>
+<members>
+<member name="F:CmdInfrastructureNS.CommandPackage._I_am_a_ClientOfThisServiceColxn">
+	<summary>
+ The Svc in this Host is a Client of all the Services described in this Colxn...
+ Use this Colxn to find the BaseAddress of a Service, for which, you want to create a ClientProxy
+ It is populated by EndPtDataContextSvc in its IssueExposeEndPtsCommands operation.
+ This colxn is accessible by WCFServicID, Name, Contract....
+ </summary>
+	<remarks></remarks>
+</member><member name="T:CmdInfrastructureNS.ClientOFThisServiceInfo">
+	<summary>
+ This is a tiny WCFServiceInfo that represents a WCFService...so the CustomServiceHost "knows" what services it calls as a Client..
+ Use this to find the baseAddress of a Service at runtime without making a call to the GlobalSurveyMaster
+ EndPtDataContextSvc populates this in its IssueExposeEndpointCommands operation...
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:CmdInfrastructureNS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:CmdInfrastructureNS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:CmdInfrastructureNS.ComputerPrivilegePackage">
+	<summary>
+ List of ComputerID/PrivilegeID Pairs
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CmdInfrastructureNS.SharedMethods.ToSurveyRDent_LinkString(CmdInfrastructureNS.SubscriberInfo,System.Int32)">
+	<summary>
+ This is a Survey level function...is the UriString for a Survey that has been published...RDent's would put this string in a browser...
+ </summary>
+	<param name="_SubscrInfo"></param>
+	<param name="_SurveyID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CmdInfrastructureNS.SharedMethods.ToSurveyRDent_QueueName(CmdInfrastructureNS.SubscriberInfo,System.Int32)">
+	<summary>
+ This is a Survey level function...is the QueueName for a Survey's RDent Queue...
+ </summary>
+	<param name="_SubscrInfo"></param>
+	<param name="_SurveyID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CmdInfrastructureNS.SharedMethods.ToSurveyRDent_QueueURI(CmdInfrastructureNS.SubscriberInfo,System.Int32)">
+	<summary>
+ This is a Survey level function...is the UriString for a Survey's RDent Queue...
+ </summary>
+	<param name="_SubscrInfo"></param>
+	<param name="_SurveyID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CmdInfrastructureNS.SubscriberInfo.PrivEnumLoginInfo_List(System.UInt64)">
+	<summary>
+ this returns a list of guestlogininfos that have the privileges described by the _IncludedPrivEnumList parameter..
+ </summary>
+	<param name="_IncludedPrivEnumList"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CmdInfrastructureNS.NewSubscriberPackage.#ctor(System.String,CmdInfrastructureNS.SubscriptionLevel,System.Int32,System.String)">
+	<summary>
+ is new for this class
+ </summary>
+	<param name="_EmailAddress">Is Raw Email Address...gets Normalized within this class</param>
+	<param name="_SubcriptionLvl"></param>
+	<param name="_AuthID">CreditCardService e.g., Authorize.Net key to authorization data for this subscriber</param>
+	<param name="_SubScrName"></param>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.NewSubscriberPackage.DefaultPrivilegeBitMask">
+	<summary>
+ This comes from App.config key="DefaultPrivBMask_NewSubscriber"...is the Bitmask of PrivilegeDescrEnum for an new Subscriber account
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.NewLoginPackage.DefaultPrivilegeBitMask">
+	<summary>
+ This comes from App.config key="DefaultPrivBMask_AddedLogin"...is the Bitmask of PrivilegeDescrEnum for an additional login on a Subscriber account
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.NewLoginPackage.NormalizedEmailAddress">
+	<summary>
+ This is the emailaddress of the new LoginInfo( _EmailAddress in Sub New) that is being added to the Subscriber identifed in SubscriberInfo...
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.NewLoginPackage.SubScriberInfo">
+	<summary>
+ This is the Subscriber that "IsAdding" the new LoginInfo identified in NormalizedEmailAddress
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.NewLoginPackage.SurveyPrivileges">
+	<summary>
+ Populate this list with Surveys and Privileges you want the new login to have...If you leave it empty, this login will have default Privileges for all Survey's.
+ Otherwise, Survey's in this list will be given the Privilege assigned in this list...
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.PublishSurveyPackage.NewDataStoreDB">
+	<summary>
+ Indicates whether a new DataStore database should be created for this Survey when published...
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.PublishSurveyPackage.RDentLoginPkg">
+	<summary>
+ This is populated automatically by SubscriberOperations.PublishSurvey Method.
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>This LoginInfo will reside in the GSM LoginInfos table and also in the SSM LoginInfos Table</remarks>
+</member><member name="P:CmdInfrastructureNS.PublishSurveyPackage.SubScriberInfo">
+	<summary>
+ This is the Subscriber that "IsPublishing" the survey identified by _SurveyID...
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CmdInfrastructureNS.PublishSurveyPackage.CreateDBInfo">
+	<summary>
+ This contains info about database(s) created by SqlServerOperations Methods, e.g., CreateNewSurveyDataStore,...this is the result of that method...
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

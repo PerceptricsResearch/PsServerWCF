@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="L2S_SurveyDataStore">
+  <DataContextMoniker Name="/L2S_SurveyDataStoreDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fb323846-252f-44aa-bbc1-ff419a1848ad" absoluteBounds="4.75, 1.875, 2, 1.5485173042615252">
+      <DataClassMoniker Name="/L2S_SurveyDataStoreDataContext/ResultsDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e44cddf-97d0-47b2-9446-804ee930f605" absoluteBounds="4.765, 2.335, 1.9700000000000002, 0.9885173042615254" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d02ea63-8cc8-4321-a259-bc024701e918" absoluteBounds="7.25, 3.75, 2, 1.7066065049171444">
+      <DataClassMoniker Name="/L2S_SurveyDataStoreDataContext/SDSRespondentModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84b87af3-bf68-4c5b-b347-3bd48e6dc08f" absoluteBounds="7.265, 4.21, 1.9700000000000002, 1.1466065049171448" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f182142c-5770-4909-ad5b-1d4e43ca8b27" absoluteBounds="0.875, 2.125, 2, 1.7066065049171448">
+      <DataClassMoniker Name="/L2S_SurveyDataStoreDataContext/SDSResponseModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d208e41a-9e65-478a-b991-38902fc8a0fc" absoluteBounds="0.89000000000000012, 2.585, 1.9700000000000002, 1.1466065049171448" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7148315-2a09-4b54-a05f-c49ae8936b8f" absoluteBounds="3.375, 0.5, 2, 1.2323389029502869">
+      <DataClassMoniker Name="/L2S_SurveyDataStoreDataContext/ResultsFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8247cbba-e6c3-4765-979a-665a58de6fa2" absoluteBounds="3.3899999999999997, 0.96, 1.9700000000000002, 0.67233890295028687" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d62ca02-9993-4157-9760-0a6f1efee2ae" absoluteBounds="3.25, 3.875, 2, 1.3904281036059061">
+      <DataClassMoniker Name="/L2S_SurveyDataStoreDataContext/Response" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00203cde-ce5c-4f01-bed4-6dc97f5df557" absoluteBounds="3.2649999999999997, 4.335, 1.9700000000000002, 0.83042810360590613" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 4.66429768880208); (5.25 : 4.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L2S_SurveyDataStoreDataContext/SDSRespondentModel/SDSRespondentModel_Response" />
+      <nodes>
+        <classShapeMoniker Id="8d02ea63-8cc8-4321-a259-bc024701e918" />
+        <classShapeMoniker Id="8d62ca02-9993-4157-9760-0a6f1efee2ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.875 : 4.0881982421875); (1.875 : 4.66429768880208); (3.25 : 4.66429768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L2S_SurveyDataStoreDataContext/SDSResponseModel/SDSResponseModel_Response" />
+      <nodes>
+        <classShapeMoniker Id="f182142c-5770-4909-ad5b-1d4e43ca8b27" />
+        <classShapeMoniker Id="8d62ca02-9993-4157-9760-0a6f1efee2ae" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 2.88544840494792); (4.75 : 2.88544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/L2S_SurveyDataStoreDataContext/SDSResponseModel/SDSResponseModel_ResultsDetail" />
+      <nodes>
+        <classShapeMoniker Id="f182142c-5770-4909-ad5b-1d4e43ca8b27" />
+        <classShapeMoniker Id="fb323846-252f-44aa-bbc1-ff419a1848ad" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="a1ae0dd9-6008-449a-8785-8a5eddda1447" absoluteBounds="7.5, 0.5, 2, 1.3904281036059063">
+      <DataClassMoniker Name="/L2S_SurveyDataStoreDataContext/ResultsSummary" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7af96916-1d4e-4d29-8ba1-b0bade99e029" absoluteBounds="7.515, 0.96, 1.9700000000000002, 0.83042810360590624" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 1.89042810360591); (8.5 : 2.65697320393372); (6.75 : 2.65697320393372)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/L2S_SurveyDataStoreDataContext/ResultsSummary/ResultsSummary_ResultsDetail" />
+      <nodes>
+        <classShapeMoniker Id="a1ae0dd9-6008-449a-8785-8a5eddda1447" />
+        <classShapeMoniker Id="fb323846-252f-44aa-bbc1-ff419a1848ad" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

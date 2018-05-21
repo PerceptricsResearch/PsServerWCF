@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="PerceptricsEmail" Class="L2S_PerceptricsEmailDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LEASES\DEVEXPRESS2008R2;Initial Catalog=PerceptricsEmail;Integrated Security=True" SettingsObjectName="CmdInfrastructureNS.My.MySettings" SettingsPropertyName="PerceptricsEmailConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EmailAcctInfo" Member="EmailAcctInfos">
+    <Type Name="EmailAcctInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HostServer" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Port" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EnableSSL" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="EmailAcctInfo_EmailForm" Member="EmailForms" ThisKey="ID" OtherKey="DefaultEmailAcctInfoID" Type="EmailForm" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailForm" Member="EmailForms">
+    <Type Name="EmailForm">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FormName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DefaultEmailAcctInfoID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BlindCopyColxnID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FormEnumID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HTMLContentSource" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="EmailForm_EmailFormMessageItem" Member="EmailFormMessageItems" ThisKey="ID" OtherKey="FormID" Type="EmailFormMessageItem" />
+      <Association Name="EmailAcctInfo_EmailForm" Member="EmailAcctInfo" ThisKey="DefaultEmailAcctInfoID" OtherKey="ID" Type="EmailAcctInfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmailFormMessageItem" Member="EmailFormMessageItems">
+    <Type Name="EmailFormMessageItem">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FormID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KVPKey" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KVPValue" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Association Name="EmailForm_EmailFormMessageItem" Member="EmailForm" ThisKey="FormID" OtherKey="ID" Type="EmailForm" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="SurveyMaster" Class="L2S_EptSvcDCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\DEVRENTS;AttachDbFilename=&quot;C:\Program Files\Microsoft SQL Server\MSSQL.2\MSSQL\Data\SurveyMaster.mdf&quot;;Integrated Security=True;Connect Timeout=30;User Instance=False" SettingsObjectName="EndPtDataCntxtSvcNS.My.MySettings" SettingsPropertyName="SurveyMasterConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.WCFServiceInfo" Member="WCFServiceInfos">
+    <Type Name="WCFServiceInfo">
+      <Column Name="WCFServiceID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ComputerServerName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ComputerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WCFSvcTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsIncludedExposeEndPt" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CommandSvcName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BaseAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Contract" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CommandSvcBaseAddress" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CommandSvcContract" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CommandSvcAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WCFSvcPrivilegeConfig" Member="WCFSvcPrivilegeConfigs">
+    <Type Name="WCFSvcPrivilegeConfig">
+      <Column Name="WCFPrivilegeConfigID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WCFSvcTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrivilegeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WCFSvCType" Member="WCFSvCTypes">
+    <Type Name="WCFSvCType">
+      <Column Name="WCFSvcTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="WCFSvcTypeContract" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="WCFSvcCommandSvcContract" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Privilege" Member="Privileges">
+    <Type Name="Privilege">
+      <Column Name="PriviligeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PrivilegeDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginInfo" Member="LoginInfos">
+    <Type Name="LoginInfo">
+      <Column Name="LogInID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoginEmail" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsLoggedIn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordHash" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordLastSetDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SurveyDataStore" Member="SurveyDataStores">
+    <Type Name="SurveyDataStore">
+      <Column Name="SurveyDataStoreID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AbsolutePath" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ComputerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DatabaseName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ComputerInfo" Member="ComputerInfos">
+    <Type Name="ComputerInfo">
+      <Column Name="ComputerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ServerName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ClientOFWCFServiceInfo" Member="ClientOFWCFServiceInfos">
+    <Type Name="ClientOFWCFServiceInfo">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SvcthatCallsWCFSvcInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SvcthatGetsCalledWCFSvcInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryServerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentAuthorizationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryContactInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerSurveyMasterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryDataStoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RDENTQueueURI_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CustomerDBOperationsNS
+</name>
+</assembly>
+<members>
+<member name="P:CustomerDBOperationsNS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:CustomerDBOperationsNS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:CustomerDBOperationsNS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:CustomerDBOperationsNS.Manager.GetPrivServiceMappings(System.Int32)">
+	<summary>
+ Returns a Survey_Priv_DC_Colxn_Pkg that contains the ServiceTypeEnumBitMask and the contents of a DC_Package(surveyPrivList and Survey_DC_list)
+ </summary>
+	<param name="_LoginID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:CustomerDBOperationsNS.Survey_Priv_DC_Colxn_Pkg._Survey_Privilege_List">
+	<summary>
+ List of SurveyID and PrivilegeBitMask of PrivilegeDescrEnum
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

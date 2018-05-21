@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="L2S_EptSvcDC">
+  <DataContextMoniker Name="/L2S_EptSvcDCDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fcb5abdf-80d8-44bc-8895-26c20d3ab39c" isExpanded="false" absoluteBounds="3.125, 1.625, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/WCFServiceInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="591c41b1-94d8-48d3-91cd-256b3d9b34b8" absoluteBounds="3.14, 2.085, 1.9700000000000002, 2.2532309095064798" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="891e516c-b7e2-4972-8c47-ca9ef3096ca3" isExpanded="false" absoluteBounds="3.125, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/WCFSvcPrivilegeConfig" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17e39398-447a-4bf1-bc23-ae801b688999" absoluteBounds="3.14, 1.21, 1.9700000000000002, 0.67233890295028687" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b5cb7e57-9ee2-4089-b0c6-7757b6bc25e4" isExpanded="false" absoluteBounds="5.25, 0.625, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/WCFSvCType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3dc9daef-ed55-4559-92c6-23c2935f5815" absoluteBounds="5.2650000000000006, 1.085, 1.9700000000000002, 0.67233890295028687" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13aa461e-f05f-4fe7-8cad-5afb8bb435fa" isExpanded="false" absoluteBounds="0.75, 0.75, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/Privilege" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6453b607-5cfd-4ed0-ae65-37ece7fd49fe" absoluteBounds="0.76500000000000012, 1.21, 1.9700000000000002, 0.51424970229466749" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="648014e1-fc28-4694-824e-c0caa2ebf02c" isExpanded="false" absoluteBounds="0.75, 1.625, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/LoginInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14207183-024c-4d1b-9a17-58448c8bba94" absoluteBounds="0.76500000000000012, 2.085, 1.9700000000000002, 1.3046957055727639" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7bc5add6-2631-4e65-b171-b72ff83dab58" isExpanded="false" absoluteBounds="3, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/SurveyDataStore" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5ed086e9-c6d7-47c9-98b0-633ecaceb994" absoluteBounds="3.015, 3.085, 1.9700000000000002, 0.83042810360590624" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="41202a16-5e68-4326-bee8-e0582c16ea79" isExpanded="false" absoluteBounds="0.625, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/ComputerInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="198b1711-2f8c-4afd-9cb5-a9223db22c17" absoluteBounds="0.64000000000000012, 3.085, 1.9700000000000002, 0.67233890295028687" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="74aeef38-23c4-4ba1-8844-80e6987d8a0b" isExpanded="false" absoluteBounds="5.375, 1.75, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/ClientOFWCFServiceInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec8d0947-4802-4473-a7fa-12dbb7fa8728" absoluteBounds="5.39, 2.21, 1.9700000000000002, 0.67233890295028687" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0202f4ee-026a-434b-ad3e-9db0e55050d4" isExpanded="false" absoluteBounds="5.25, 2.625, 2, 0.45">
+      <DataClassMoniker Name="/L2S_EptSvcDCDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bc843727-41e9-48e2-b3fa-e89aba803113" absoluteBounds="5.265, 3.085, 1.9700000000000002, 1.4627849062283833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

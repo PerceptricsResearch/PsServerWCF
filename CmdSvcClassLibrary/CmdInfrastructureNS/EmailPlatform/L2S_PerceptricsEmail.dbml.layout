@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 8.5" name="L2S_PerceptricsEmail">
+  <DataContextMoniker Name="/L2S_PerceptricsEmailDataContext" />
+  <nestedChildShapes>
+    <classShape Id="41f853a8-477f-4007-aea0-889e5a858893" absoluteBounds="5.75, 1.5, 2, 2.1316349283854166">
+      <DataClassMoniker Name="/L2S_PerceptricsEmailDataContext/EmailAcctInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="678482e5-2337-440b-b239-48069da2cb8f" absoluteBounds="5.765, 1.96, 1.9700000000000002, 1.5716349283854165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0bdcce6-3730-4360-b440-675417f7b895" absoluteBounds="6, 4.25, 2, 1.94214111328125">
+      <DataClassMoniker Name="/L2S_PerceptricsEmailDataContext/EmailForm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab8c43b8-2063-4ba6-9d81-70c55d3e5649" absoluteBounds="6.015, 4.71, 1.9700000000000002, 1.38214111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b07ff5e-9dbb-4437-abce-333fb02e8bf1" absoluteBounds="9.25, 3, 2, 1.5631534830729166">
+      <DataClassMoniker Name="/L2S_PerceptricsEmailDataContext/EmailFormMessageItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06058e9f-027d-4214-8f36-cd8727f93d67" absoluteBounds="9.265, 3.46, 1.9700000000000002, 1.0031534830729165" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.875 : 3.63163492838542); (6.875 : 4.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/L2S_PerceptricsEmailDataContext/EmailAcctInfo/EmailAcctInfo_EmailForm" />
+      <nodes>
+        <classShapeMoniker Id="41f853a8-477f-4007-aea0-889e5a858893" />
+        <classShapeMoniker Id="b0bdcce6-3730-4360-b440-675417f7b895" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8 : 5.37764779817708); (10.25 : 5.37764779817708); (10.25 : 4.56315348307292)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/L2S_PerceptricsEmailDataContext/EmailForm/EmailForm_EmailFormMessageItem" />
+      <nodes>
+        <classShapeMoniker Id="b0bdcce6-3730-4360-b440-675417f7b895" />
+        <classShapeMoniker Id="8b07ff5e-9dbb-4437-abce-333fb02e8bf1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

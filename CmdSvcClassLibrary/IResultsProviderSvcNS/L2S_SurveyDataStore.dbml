@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Exxon4DataStore" Class="L2S_SurveyDataStoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=RENTS\DEVRENTS;Initial Catalog=Exxon4DataStore;Integrated Security=True" SettingsObjectName="IResultsProviderSvcNS.My.MySettings" SettingsPropertyName="Exxon4DataStoreConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ResultsDetail" Member="ResultsDetails">
+    <Type Name="ResultsDetail">
+      <Column Name="ResultsDetailID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SDSResponseModelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResultsSummaryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RespDentCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastCountTimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="SDSResponseModel_ResultsDetail" Member="SDSResponseModel" ThisKey="SDSResponseModelID" OtherKey="SDSResponseModelID" Type="SDSResponseModel" IsForeignKey="true" />
+      <Association Name="ResultsSummary_ResultsDetail" Member="ResultsSummary" ThisKey="ResultsSummaryID" OtherKey="ResultsSummaryID" Type="ResultsSummary" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SDSRespondentModel" Member="SDSRespondentModels">
+    <Type Name="SDSRespondentModel">
+      <Column Name="RespondentModelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomField" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SDSRespondentModel_Response" Member="Responses" ThisKey="RespondentModelID" OtherKey="RespondentID" Type="Response" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SDSResponseModel" Member="SDSResponseModels">
+    <Type Name="SDSResponseModel">
+      <Column Name="SDSResponseModelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuestID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Key1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Key2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Key3" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="SDSResponseModel_ResultsDetail" Member="ResultsDetails" ThisKey="SDSResponseModelID" OtherKey="SDSResponseModelID" Type="ResultsDetail" />
+      <Association Name="SDSResponseModel_Response" Member="Responses" ThisKey="SDSResponseModelID" OtherKey="ResponseModelID" Type="Response" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResultsFilter" Member="ResultsFilters">
+    <Type Name="ResultsFilter">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Responses" Member="Responses">
+    <Type Name="Response">
+      <Column Name="ResponseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RespondentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResponseModelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PostedTimeStamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="SDSRespondentModel_Response" Member="SDSRespondentModel" ThisKey="RespondentID" OtherKey="RespondentModelID" Type="SDSRespondentModel" IsForeignKey="true" />
+      <Association Name="SDSResponseModel_Response" Member="SDSResponseModel" ThisKey="ResponseModelID" OtherKey="SDSResponseModelID" Type="SDSResponseModel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ResultsSummary" Member="ResultsSummaries">
+    <Type Name="ResultsSummary">
+      <Column Name="ResultsSummaryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ResultsSummaryAddress" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RFGOList" Type="System.Data.Linq.Binary" DbType="VarBinary(7999)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ResultsSummary_ResultsDetail" Member="ResultsDetails" ThisKey="ResultsSummaryID" OtherKey="ResultsSummaryID" Type="ResultsDetail" />
+    </Type>
+  </Table>
+</Database>

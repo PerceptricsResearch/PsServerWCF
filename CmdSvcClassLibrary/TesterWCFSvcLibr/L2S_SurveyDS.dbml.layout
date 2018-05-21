@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="L2S_SurveyDS">
+  <DataContextMoniker Name="/L2S_SurveyDSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="844b2d59-29b2-4310-8873-f08011e3ec0e" absoluteBounds="3.25, 0.5, 2, 4.86839051802953">
+      <DataClassMoniker Name="/L2S_SurveyDSDataContext/SurveyMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8d83f309-5225-4f3f-9f68-ff9628c35489" absoluteBounds="3.2649999999999997, 0.96, 1.9700000000000002, 4.3083905180295305" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="L2S_PgItemColxnSDS">
+  <DataContextMoniker Name="/L2S_PgItemColxnSDSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="86ec0712-5011-4838-9d2c-6e1cd59d23d1" absoluteBounds="2.75, 0.5, 2, 1.3904281036059063">
+      <DataClassMoniker Name="/L2S_PgItemColxnSDSDataContext/PageContentModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3862c591-238d-4fa3-a153-af538ed31c78" absoluteBounds="2.765, 0.96, 1.9700000000000002, 0.83042810360590624" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a952ede2-f899-4fa7-abd3-afb37620d54b" absoluteBounds="4.875, 0.625, 2, 1.5485173042615252">
+      <DataClassMoniker Name="/L2S_PgItemColxnSDSDataContext/PageContentElement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c96913ed-3627-413d-bed1-b7f0c782f68a" absoluteBounds="4.8900000000000006, 1.085, 1.9700000000000002, 0.9885173042615254" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d3abcd66-cd0d-49b1-885f-09dfdee2e113" absoluteBounds="4.5, 2.375, 2, 2.1808741068840027">
+      <DataClassMoniker Name="/L2S_PgItemColxnSDSDataContext/QuestOptionItemModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="11eb898f-87c5-4a67-9cc9-95332d54bc25" absoluteBounds="4.515, 2.835, 1.9700000000000002, 1.6208741068840027" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee818b30-75c5-4f9a-bf6d-6f4d97573da6" absoluteBounds="2, 2.5, 2, 1.864695705572764">
+      <DataClassMoniker Name="/L2S_PgItemColxnSDSDataContext/QuestionOptionSetModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9d3846eb-ede6-4f78-a81a-6c998a940b8d" absoluteBounds="2.015, 2.96, 1.9700000000000002, 1.3046957055727639" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="966eff1f-9ca5-4861-91df-41d329cb2e6e" absoluteBounds="0.5, 0.5, 2, 1.864695705572764">
+      <DataClassMoniker Name="/L2S_PgItemColxnSDSDataContext/PgItemModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="802849f7-d688-47f1-9547-a0f531c8b59e" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.3046957055727639" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

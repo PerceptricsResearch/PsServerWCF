@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Survey4DataStore" Class="L2S_SurveyDSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=&quot;C:\Program Files\Microsoft SQL Server\MSSQL.2\MSSQL\Data\Survey4DataStore.mdf&quot;;Integrated Security=True;Connect Timeout=30;User Instance=True" SettingsObjectName="TesterWCFSvcLibr.My.MySettings" SettingsPropertyName="Survey4DataStoreConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SurveyMaster" Member="SurveyMasters">
+    <Type Name="SurveyMaster">
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SurveyDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueURI" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueComputer" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyDataStoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyDataStoreComputer" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoginID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FirstRespondentPostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRespondentPostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RespondenStartedtCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RespondentCompletedCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastRespondentStartedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRespondentCompletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActiveRespondentsCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstPublishedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastPublishedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SurveyType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResponsePostingSvcIsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StatisticsViewerSvcIsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstStatisticsViewerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastStatisticsViewerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SurveyStateID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ExxonSurveyMaster" Class="L2S_CustomerSurveyMasterDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LEASES\DEVRENTS;Initial Catalog=ExxonSurveyMaster;Integrated Security=True" SettingsObjectName="CustomerDBSvc.My.MySettings" SettingsPropertyName="ExxonSurveyMasterConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.SurveyMaster" Member="SurveyMasters">
+    <Type Name="SurveyMaster">
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SurveyDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueURI" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueComputer" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyDataStoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyDataStoreComputer" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoginID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FirstRespondentPostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRespondentPostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RespondenStartedtCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RespondentCompletedCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastRespondentStartedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRespondentCompletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActiveRespondentsCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstPublishedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastPublishedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SurveyType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResponsePostingSvcIsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StatisticsViewerSvcIsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstStatisticsViewerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastStatisticsViewerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SurveyStateID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SurveyDataStore" Member="SurveyDataStores">
+    <Type Name="SurveyDataStore">
+      <Column Name="SurveyDataStoreID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AbsolutePath" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ComputerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryServerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentAuthorizationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryContactInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryDataStoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Privilege" Member="Privileges">
+    <Type Name="Privilege">
+      <Column Name="PriviligeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PrivilegeDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GlobalPrivilegeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ComputerInfo" Member="ComputerInfos">
+    <Type Name="ComputerInfo">
+      <Column Name="ComputerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="State" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ServerName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GlobalComputerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ImagesStore" Member="ImagesStores">
+    <Type Name="ImagesStore">
+      <Column Name="ImageID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PCMID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PermPCMGuidString" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Height" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Width" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PCElementID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ByteArray" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Format" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SequenceNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginSurveyPrivilege" Member="LoginSurveyPrivileges">
+    <Type Name="LoginSurveyPrivilege">
+      <Column Name="LoginSurveyPrivilegeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoginID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrivilegeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="GlobalSMLoginID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrivEnumBitMask" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginInfo" Member="LoginInfos">
+    <Type Name="LoginInfo">
+      <Column Name="LogInID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoginEmail" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsLoggedIn" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PasswordHash" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PasswordLastSetDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LogInID_GSM" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoginEmailRawString" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="IsCustomerOriginator" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PrivBitMask" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.proc_GetSurveyIDsAndPrivilegeIDsByLoginID" Method="proc_GetSurveyIDsAndPrivilegeIDsByLoginID">
+    <Parameter Name="LoginID" Parameter="loginID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_GetSurveyIDsAndPrivilegeIDsByLoginIDResult">
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrivilegeID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
