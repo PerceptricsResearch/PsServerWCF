@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SurveyMaster" Class="L2S_MasterSurveyDBDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LEASES\DEVRENTS;Initial Catalog=SurveyMaster;Integrated Security=True" SettingsObjectName="MasterDBSvcLibr.My.MySettings" SettingsPropertyName="SurveyMasterConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Event" Member="EventItems">
+    <Type Name="EventItem">
+      <Column Name="EventItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EventOccurredDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EventData" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoginID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="VarChar(75) NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryServerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentAuthorizationID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryContactInfoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerSurveyMasterID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryDataStoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RDENTQueueURI_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SurveyMaster" Member="SurveyMasters">
+    <Type Name="SurveyMaster">
+      <Column Name="SurveyID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SurveyDescription" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueURI" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QueueComputer" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyDataStoreID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SurveyDataStoreComputer" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LoginID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FirstRespondentPostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRespondentPostedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RespondenStartedtCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RespondentCompletedCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastRespondentStartedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRespondentCompletedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ActiveRespondentsCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstPublishedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastPublishedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SurveyType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ResponsePostingSvcIsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="StatisticsViewerSvcIsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FirstStatisticsViewerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastStatisticsViewerDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SurveyStateID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SurveyDataStore" Member="SurveyDataStores">
+    <Type Name="SurveyDataStore">
+      <Column Name="SurveyDataStoreID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AbsolutePath" Type="System.String" DbType="VarChar(350) NOT NULL" CanBeNull="false" />
+      <Column Name="ComputerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DatabaseName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="CnxnString" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoginInfo" Member="LoginInfos">
+    <Type Name="LoginInfo">
+      <Column Name="LogInID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LoginEmail" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsLoggedIn" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordHash" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordLastSetDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastSaltByteArray" Type="System.Data.Linq.Binary" DbType="VarBinary(50)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LastSaltMechanismID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.proc_GetGlobalMasterLoginDataByLoginName" Method="proc_GetGlobalMasterLoginDataByLoginName">
+    <Parameter Name="LoginEMail" Parameter="loginEMail" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="PasswordHash" Parameter="passwordHash" Type="System.Int32" DbType="Int" />
+    <ElementType Name="proc_GetGlobalMasterLoginDataByLoginNameResult">
+      <Column Name="DatabaseName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

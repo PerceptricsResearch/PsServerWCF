@@ -1,0 +1,93 @@
+﻿<Window x:Class="Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="ResponseDispatcherContainer" Height="300" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+    <!--This is the Left Column-->
+            <Grid>
+        <Border Margin="5" Name="Border1" BorderBrush="BlueViolet" BorderThickness="5" CornerRadius="5,5,5,5">
+            <Grid  Name="Grid1" Margin="5" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height=".55*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width=".4*"/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox x:Name="ServiceListbox" SelectionMode="Single" 
+                                 ScrollViewer.CanContentScroll="False" 
+                                 VirtualizingStackPanel.IsVirtualizing="False"
+                                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2"/>
+                        <GridSplitter Grid.Column="1" Background="BlueViolet" Opacity=".5"
+                                      Width="3" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+                        <ListBox x:Name="StateListbox" Grid.Column="2"
+                                 ScrollViewer.CanContentScroll="False" 
+                                 VirtualizingStackPanel.IsVirtualizing="False"
+                                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2"/>
+                    </Grid>
+                    <GridSplitter Grid.Row="1" Background="BlueViolet" Height="3" Opacity=".5"
+                                  HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+                    <!--CenterListbox-->
+                    <ListBox x:Name="OperationsMonitorListBox" Grid.Row="2"  Margin="2"
+                             ScrollViewer.CanContentScroll="False" 
+                             VirtualizingStackPanel.IsVirtualizing="False">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Path=Key}" Margin="2"/>
+                                        <TextBlock Text="{Binding Path=Value}" Margin="2"/>
+                                    </StackPanel>
+                                </ListBoxItem>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                    <!--Buttons at Bottom-->
+                    <UniformGrid Grid.Row="3"  Rows="1" Margin="2">
+                        <Button  Name="Button1" Margin="2" Background="LightSteelBlue" >Start Service</Button>
+                        <Button  Name="Button2" Margin="2" Background="LightSteelBlue" >Stop Service</Button>
+                        <Button Name="Button3"  Margin="2" Background="LightSteelBlue" Click="Button3_Click_1">Refresh Monitor</Button>
+                    </UniformGrid>
+                </Grid>
+        </Border>
+    </Grid>
+        <GridSplitter Grid.Column="1" Background="Red" Width="5" VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+        
+        <!--This is the Right Column-->
+        <Grid Grid.Column="2">
+            <Border BorderBrush="SpringGreen" Margin="5" BorderThickness="5" Padding="2" CornerRadius="5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="35"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Response Posting Container Controls" Grid.Row="0" 
+                               VerticalAlignment="Center" HorizontalAlignment="Stretch" TextAlignment="Center"/>
+                    <ListBox x:Name="PostingContainerListbox" Grid.Row="1" Margin="5"  Background="SlateGray" Foreground="White">
+                        <TextBlock Text="net.msmq://rents/private/responsessurveyid4" TextWrapping="Wrap"/>
+                        <TextBlock Text="net.msmq://rents/private/responsessurveyid5" TextWrapping="Wrap"/>
+                        <TextBlock Text="net.msmq://rents/private/responsessurveyid6" TextWrapping="Wrap"/>
+                    </ListBox>
+                    <UniformGrid Grid.Row="2" Rows="1" Margin="2">
+                    <Button x:Name="PostingButton_Start" Content="Start" Margin="2" Click="PostingButton_Click" />
+                    <Button x:Name="PostingButton_Stop" Content="Stop" Margin="2" Click="PostingButton_Click"/>
+                    <Button x:Name="PostingButton_Pause" Content="Pause" Margin="2" Click="PostingButton_Click"/>
+                    <Button x:Name="PostingButton_Resume" Content="Resume" Margin="2" Click="PostingButton_Click"/>
+                </UniformGrid>
+                </Grid>
+            </Border>
+        </Grid>
+        </Grid>
+</Window>

@@ -1,0 +1,86 @@
+﻿<Window x:Class="CommandWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="CommandWindow MasterDBSvcs" Height="200" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Margin="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Commands Recieved" Grid.Row="0" HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"/>
+            <TextBlock x:Name="CmdSvc_State_Textblock" Text="" Grid.Row="0" HorizontalAlignment="Right"
+                                       VerticalAlignment="Stretch" Margin="4"/>
+            <ListBox x:Name="CommandsListBox" Grid.Row="2" 
+                                VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  >
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <ListBoxItem>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Path=Key}" Margin="2"/>
+                                <TextBlock Text="{Binding Path=Value}" Margin="2"/>
+                            </StackPanel>
+                        </ListBoxItem>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <GridSplitter Background="BlueViolet" Height="3" Opacity=".5" 
+                      HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" />
+        <Grid Grid.Row="2"  Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".35*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Dormant EndPoints" TextAlignment="Center"
+                                   Grid.Row="0" Margin="2"
+                                   HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="WhiteSmoke"/>
+                <ListBox x:Name="DormantPostingSvcs_Listbox" Grid.Row="1" Margin="2" BorderBrush="BlueViolet" BorderThickness="2" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="1"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
+            </Grid>
+            <GridSplitter Grid.Column="1" Width="3" Background="BlueViolet" Opacity=".5"
+                          VerticalAlignment="Stretch" HorizontalAlignment="Center"/>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Active EndPoints" TextAlignment="Center"
+                                   Grid.Row="0" Margin="2"
+                                   HorizontalAlignment="Stretch" VerticalAlignment="Center" Background="WhiteSmoke"/>
+                <ListBox x:Name="ActivePostingSvcs_Listbox" Grid.Row="1" Margin="2" BorderBrush="BlueViolet" BorderThickness="2" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="1"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding Path=Key}" 
+                                    Tag="{Binding Path=Value}" 
+                                    Click="MyClickHandler"
+                                    Background="LightBlue"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
